@@ -49,5 +49,10 @@ namespace Davinci_s_Inventory_Managaement_System
         {
 
         }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
