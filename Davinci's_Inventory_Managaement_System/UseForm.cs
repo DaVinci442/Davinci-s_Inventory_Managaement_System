@@ -54,5 +54,38 @@ namespace Davinci_s_Inventory_Managaement_System
             userModule.updatebtn.Enabled = false;
             userModule.ShowDialog();
         }
+
+        private void Userdvg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = Userdvg.Columns[e.ColumnIndex].Name;
+            if(colName == "Edit")
+            {
+                UserModule userModule = new UserModule();
+                userModule.textusename.Text = Userdvg.Rows[e.RowIndex].Cells[1].Value.ToString();
+                userModule.textFullname.Text = Userdvg.Rows[e.RowIndex].Cells[2].Value.ToString();
+                userModule.passtext.Text = Userdvg.Rows[e.RowIndex].Cells[3].Value.ToString();
+                userModule.textusename.Text = Userdvg.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                userModule.savebtn.Enabled = false;
+                userModule.updatebtn.Enabled = true;
+                userModule.textusename.Enabled = false;
+                userModule.ShowDialog();
+                Loaduser();
+            }
+            else if (colName == "delete")
+            {
+                if(MessageBox.Show(" Are you certain on deleting this user?","Delete Record",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    con.Open();
+                    cm = new SqlCommand(" DELETE FROM userTable WHERE Phone LIKE '" + Userdvg.Rows[e.RowIndex].Cells[1].Value.ToString() + "' ", con);
+                    cm.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Record deleted successfully");
+                }
+            }
+            Loaduser();
+
+        }
     }
 }
+ 

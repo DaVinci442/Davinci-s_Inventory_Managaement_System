@@ -116,6 +116,7 @@
             this.textusename.Name = "textusename";
             this.textusename.Size = new System.Drawing.Size(252, 20);
             this.textusename.TabIndex = 5;
+            this.textusename.TextChanged += new System.EventHandler(this.textusename_TextChanged);
             // 
             // passtext
             // 
@@ -125,6 +126,7 @@
             this.passtext.Size = new System.Drawing.Size(252, 20);
             this.passtext.TabIndex = 7;
             this.passtext.UseSystemPasswordChar = true;
+            this.passtext.TextChanged += new System.EventHandler(this.passtext_TextChanged);
             // 
             // Password
             // 
@@ -161,6 +163,7 @@
             this.updatebtn.TabIndex = 9;
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = false;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // btnClear
             // 
@@ -182,6 +185,7 @@
             this.textFullname.Name = "textFullname";
             this.textFullname.Size = new System.Drawing.Size(252, 20);
             this.textFullname.TabIndex = 5;
+            this.textFullname.TextChanged += new System.EventHandler(this.textFullname_TextChanged);
             // 
             // Fullname
             // 
@@ -236,6 +240,7 @@
             this.Name = "UserModule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserModule";
+            this.Load += new System.EventHandler(this.UserModule_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
@@ -251,16 +256,16 @@
         private customerButtons customerButtons1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Username;
-        private System.Windows.Forms.TextBox textusename;
-        private System.Windows.Forms.TextBox passtext;
         private System.Windows.Forms.Label Password;
         private System.Windows.Forms.PictureBox pictureBoxClose;
-        private System.Windows.Forms.TextBox textFullname;
         private System.Windows.Forms.Label Fullname;
         private System.Windows.Forms.Label Phone;
-        private System.Windows.Forms.TextBox textphone;
         public System.Windows.Forms.Button savebtn;
         public System.Windows.Forms.Button updatebtn;
         public System.Windows.Forms.Button btnClear;
+        public System.Windows.Forms.TextBox textusename;
+        public System.Windows.Forms.TextBox passtext;
+        public System.Windows.Forms.TextBox textFullname;
+        public System.Windows.Forms.TextBox textphone;
     }
 }

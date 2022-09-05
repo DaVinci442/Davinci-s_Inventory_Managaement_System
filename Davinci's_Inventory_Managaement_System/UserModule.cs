@@ -67,7 +67,7 @@ namespace Davinci_s_Inventory_Managaement_System
             textFullname.Clear();
             passtext.Clear();
             textphone.Clear();
-        }
+        } 
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -76,6 +76,52 @@ namespace Davinci_s_Inventory_Managaement_System
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void UserModule_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textusename_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textFullname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passtext_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updatebtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Are you certain on updating this user's deatils", "Updating Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cm = new SqlCommand("UPDATE userTable SET fullname = @fullname,password= @password,phone = @phone WHERE username LIKE '" +textusename.Text+ "'", con);
+                
+                    cm.Parameters.AddWithValue("@Fullname", textFullname.Text);
+                    cm.Parameters.AddWithValue("@Password", passtext.Text);
+                    cm.Parameters.AddWithValue("@Phone", textphone.Text);
+                    con.Open();
+                    cm.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("User Updated successfully.");
+                    this.Dispose();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

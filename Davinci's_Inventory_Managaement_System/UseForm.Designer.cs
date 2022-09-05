@@ -40,8 +40,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerButtons1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Userdvg)).BeginInit();
@@ -113,14 +113,15 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6});
+            this.delete,
+            this.Edit});
             this.Userdvg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Userdvg.EnableHeadersVisualStyles = false;
             this.Userdvg.Location = new System.Drawing.Point(0, 0);
             this.Userdvg.Name = "Userdvg";
             this.Userdvg.Size = new System.Drawing.Size(984, 434);
             this.Userdvg.TabIndex = 2;
+            this.Userdvg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Userdvg_CellContentClick);
             // 
             // Column7
             // 
@@ -156,21 +157,21 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 67;
             // 
-            // Column5
+            // delete
             // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "";
-            this.Column5.Image = ((System.Drawing.Image)(resources.GetObject("Column5.Image")));
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 5;
+            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.delete.HeaderText = "";
+            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
+            this.delete.Name = "delete";
+            this.delete.Width = 5;
             // 
-            // Column6
+            // Edit
             // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "";
-            this.Column6.Image = ((System.Drawing.Image)(resources.GetObject("Column6.Image")));
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 5;
+            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit.HeaderText = "";
+            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
+            this.Edit.Name = "Edit";
+            this.Edit.Width = 5;
             // 
             // UseForm
             // 
@@ -199,13 +200,13 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.DataGridView Userdvg;
         private System.Windows.Forms.Label label1;
+        private customerButtons customerButtons1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewImageColumn Column5;
-        private System.Windows.Forms.DataGridViewImageColumn Column6;
-        private customerButtons customerButtons1;
+        private System.Windows.Forms.DataGridViewImageColumn delete;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
     }
 }
