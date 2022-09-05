@@ -16,7 +16,7 @@ namespace Davinci_s_Inventory_Managaement_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UseForm());
+            Application.Run(new AdminForm());
         }
     }
 }

@@ -40,11 +40,19 @@ namespace Davinci_s_Inventory_Managaement_System
             while (dr.Read())
             {
                 i++;
-                Userdvg.Rows.Add(i,dr[0].ToString(), dr[0].ToString(), dr[0].ToString(), dr[0].ToString());
+                Userdvg.Rows.Add(i,dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString());
             }
             dr.Close();
             con.Close();
 
+        }
+
+        private void customerButtons1_Click(object sender, EventArgs e)
+        {
+            UserModule userModule = new UserModule();
+            userModule.savebtn.Enabled = true;
+            userModule.updatebtn.Enabled = false;
+            userModule.ShowDialog();
         }
     }
 }

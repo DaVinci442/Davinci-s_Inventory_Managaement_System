@@ -71,6 +71,7 @@
             this.customerButtons1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.customerButtons1.TabIndex = 1;
             this.customerButtons1.TabStop = false;
+            this.customerButtons1.Click += new System.EventHandler(this.customerButtons1_Click);
             // 
             // label1
             // 

@@ -37,8 +37,8 @@
             this.textusename = new System.Windows.Forms.TextBox();
             this.passtext = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
-            this.buttonLogin = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.savebtn = new System.Windows.Forms.Button();
+            this.updatebtn = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.textFullname = new System.Windows.Forms.TextBox();
             this.Fullname = new System.Windows.Forms.Label();
@@ -137,30 +137,30 @@
             this.Password.TabIndex = 8;
             this.Password.Text = "Password:";
             // 
-            // buttonLogin
+            // savebtn
             // 
-            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonLogin.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.ForeColor = System.Drawing.Color.White;
-            this.buttonLogin.Location = new System.Drawing.Point(121, 242);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(58, 28);
-            this.buttonLogin.TabIndex = 9;
-            this.buttonLogin.Text = "Save";
-            this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.savebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.savebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savebtn.ForeColor = System.Drawing.Color.White;
+            this.savebtn.Location = new System.Drawing.Point(121, 242);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(58, 28);
+            this.savebtn.TabIndex = 9;
+            this.savebtn.Text = "Save";
+            this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
-            // button1
+            // updatebtn
             // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(201, 242);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
+            this.updatebtn.BackColor = System.Drawing.Color.Blue;
+            this.updatebtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebtn.ForeColor = System.Drawing.Color.White;
+            this.updatebtn.Location = new System.Drawing.Point(200, 242);
+            this.updatebtn.Name = "updatebtn";
+            this.updatebtn.Size = new System.Drawing.Size(75, 28);
+            this.updatebtn.TabIndex = 9;
+            this.updatebtn.Text = "Update";
+            this.updatebtn.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
@@ -223,8 +223,8 @@
             this.Controls.Add(this.Phone);
             this.Controls.Add(this.textphone);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonLogin);
+            this.Controls.Add(this.updatebtn);
+            this.Controls.Add(this.savebtn);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.passtext);
             this.Controls.Add(this.Fullname);
@@ -254,13 +254,13 @@
         private System.Windows.Forms.TextBox textusename;
         private System.Windows.Forms.TextBox passtext;
         private System.Windows.Forms.Label Password;
-        private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.PictureBox pictureBoxClose;
         private System.Windows.Forms.TextBox textFullname;
         private System.Windows.Forms.Label Fullname;
         private System.Windows.Forms.Label Phone;
         private System.Windows.Forms.TextBox textphone;
+        public System.Windows.Forms.Button savebtn;
+        public System.Windows.Forms.Button updatebtn;
+        public System.Windows.Forms.Button btnClear;
     }
 }

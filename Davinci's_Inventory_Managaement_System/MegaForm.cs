@@ -17,6 +17,24 @@ namespace Davinci_s_Inventory_Managaement_System
             InitializeComponent();
         }
 
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+           
+                activeForm.Close();
+                activeForm = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                panelMain.Controls.Add(childForm);  
+                panelMain.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+
+            
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -50,6 +68,11 @@ namespace Davinci_s_Inventory_Managaement_System
         private void numericUpDown1_ValueChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            openChildForm(new UseForm());
         }
     }
 }
